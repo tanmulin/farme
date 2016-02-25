@@ -1,0 +1,60 @@
+﻿{
+  "status": 200,
+  "msg": "success",
+  "data": [
+    {
+      "_id": "5677a9d09a0c6ef2048b6ad6",
+      "groupon_name": "深圳测试数据",
+      "type_id": "4",
+      "goods_id": "5630b2345ada2b42318b5560",
+      "groupon_img": "http://pic.uyess.com/groupon/7fa1dd0a3b15c573347ce4d9ee392ae9.jpg",
+      "groupon_price": "220",
+      "groupon_total": "150",
+      "groupon_num": "2",
+      "groupon_start": "2015-12-09",
+      "groupon_end": "2015-12-31",
+      "book_day": "2",
+      "book_period": "0",
+      "groupon_desc": "阿瑟东f",
+      "status": "正常",
+      "add_time": 1450682832,
+      "address": "深圳南山区深南花园"
+    },
+    {
+      "_id": "567668549a0c6ed15a8b69",
+      "groupon_name": "深圳测试数据",
+      "groupon_img": "http://pic.uyess.com/groupon/98725ad02cac58bc2d53de0362406003.jpg",
+      "groupon_price": "128",
+      "groupon_total": "100",
+      "groupon_num": "3",
+      "groupon_start": "2015-12-18",
+      "groupon_end": "2015-12-28",
+      "book_day": "",
+      "book_period": "0",
+      "groupon_desc": "前海名苑",
+      "status": "正常",
+      "add_time": 1450600532,
+      "address": "深圳南山区蔚蓝海岸"
+    },
+    {
+      "_id": "5677a9d09a0c6ef2048",
+      "groupon_name": "深圳测试数据",
+      "type_id": "4",
+      "goods_id": "5630b2345ada2b42318b5560",
+      "groupon_img": "http://pic.uyess.com/groupon/d5759af5b2fe8c2749473c9713172838.jpg",
+      "groupon_price": "220",
+      "groupon_total": "120",
+      "groupon_num": "3",
+      "groupon_start": "2015-12-09",
+      "groupon_end": "2015-12-31",
+      "book_day": "",
+      "book_period": "0",
+      "groupon_desc": "深圳南山区",
+      "status": "正常",
+      "add_time": 1450682832,
+      "address": "深圳南山区深南花园"
+    }
+
+
+  ]
+}

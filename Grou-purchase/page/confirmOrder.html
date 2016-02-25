@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/public.css" rel="stylesheet">
+    <link href="../css/mobiscroll.custom-2.5.2.min.css" rel="stylesheet">
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/template-native.js"></script>
+    <script src="../js/mobiscroll.custom-2.5.2.min.js"></script>
+    <script src="../js/total.js"></script>
+    <script src="../js/confirmOrder.js"></script>
+    <title>确认订单</title>
+</head>
+<body>
+ <!--确认订单-->
+<div id="confirmOrder">
+    <!--头部-->
+    <div class="header w100">
+        <div class="header-cont  pr">
+            <a href="javascript:history.go(-1)" class="header-left  pa"></a>
+            <div class="header-center f36">确认订单</div>
+            <a href="personalCenter.html" class="header-right  pa" ></a>
+        </div>
+    </div>
+    <!--主要内容-->
+    <div class="main w100">
+        <div class="main-warp-out "></div>
+        <!--服务项目-->
+        <script type="text/html" id="group-total">
+            <div class="main-warp">
+                <div class="borderb bordert order-info bgf">
+                    <div class="order-info-top f24c9 borderb clearfix "><i class="fl"></i><span class="fl">服务项目</span></div>
+                    <div class="clearfix order-info-price">
+                        <div class="clearfix f28c6 borderb p20">
+                            <p class="fl " ><%= data[0].groupon_name %></p>
+                            <p class="fr">￥<%= data[0].groupon_total %>元 X1</p>
+                        </div>
+                        <div style="padding-top: 0.2rem; line-height: 1.4;" class="fr p20">
+                            <p class="f24c6">合计：￥<%= data[0].groupon_total %>元</p>
+                            <p class="f24c6">应付：<span style="color: #ff9e05;">￥<%= data[0].groupon_total %>元</span></p>
+                        </div>
+                    </div>
+                    <div class="bordert p20">
+                        <div class="clearfix f20">
+                            <span class="fl" style="color: #666;">保险服务</span>
+                            <span class="fr" style="color:#808080;">卖家赠送</span>
+                        </div>
+                        <div style="color:#808080; margin-top: 0.2rem;">尊敬的用户，轻松家店已经为您的本次订单赠送由中国人保财险承保的最高限额赔付为20万元的职业责任险。</div>
+                    </div>
+                </div>
+            </div>
+            <!--个人信息-->
+            <div class="borderb bordert order-info bgf">
+                <div class="order-info-top f24c9 borderb clearfix "><i class="fl"></i><span class="fl">个人信息</span></div>
+                <div class="clearfix order-info-address" >
+                    <div class="fl f28c9" >请选择服务地址</div>
+                    <span class="fr next"></span>
+                </div>
+            </div>
+        </script>
+
+        <!--单独购买-->
+        <script type="text/html" id="personal-bug">
+            <div class="main-warp">
+                <div class="borderb bordert order-info bgf">
+                    <div class="order-info-top f24c9 borderb clearfix "><i class="fl"></i><span class="fl">服务项目</span></div>
+                    <div class="clearfix order-info-price">
+                        <div class="clearfix f28c6 borderb p20">
+                            <p class="fl " ><%= data[0].groupon_name %></p>
+                            <p class="fr">￥<%= data[0].groupon_price %>元 X1</p>
+                        </div>
+                        <div style="padding-top: 0.2rem; line-height: 1.4;" class="fr p20">
+                            <p class="f24c6">合计：￥<%= data[0].groupon_price %>元</p>
+                            <p class="f24c6">应付：<span style="color: #ff9e05;">￥<%= data[0].groupon_price %>元</span></p>
+                        </div>
+                    </div>
+                    <div class="bordert p20">
+                        <div class="clearfix f20">
+                            <span class="fl" style="color: #666;">保险服务</span>
+                            <span class="fr" style="color:#808080;">卖家赠送</span>
+                        </div>
+                        <div style="color:#808080; margin-top: 0.2rem;">尊敬的用户，轻松家店已经为您的本次订单赠送由中国人保财险承保的最高限额赔付为20万元的职业责任险。</div>
+                    </div>
+                </div>
+            </div>
+            <!--个人信息-->
+            <div class="borderb bordert order-info bgf">
+                <div class="order-info-top f24c9 borderb clearfix "><i class="fl"></i><span class="fl">个人信息</span></div>
+                <div class="clearfix order-info-address" >
+                    <span class="fl f28c9">请选择服务地址</span>
+                    <span class="fr next"></span>
+                </div>
+            </div>
+        </script>
+        <!--下一步-->
+        <a href="javascript:" id="next_step">下一步</a>
+    </div>
+</div>
+<!--确认订单界面结束-->
+
+
+<!--我的地址-->
+<div id="myAddress"  style="display: none;">
+    <!--头部-->
+    <div class="header w100">
+        <div class="header-cont  pr">
+            <a href="javascript:" class="header-left  pa"></a>
+            <div class="header-center f36">我的地址</div>
+            <a href="personalCenter.html" class="header-right  pa" ></a>
+        </div>
+    </div>
+    <!--主要内容-->
+    <div class="main w100 bgf">
+        <!--已有地址-->
+        <ul id="already_address">
+            <script type="text/html" id="my_Address">
+                <%for(var i=0;i!==data.length;i++){%>
+                    <li class="clearfix">
+                        <span class="weiseleted-tips fl"></span>
+                        <p class="fl adress-info">
+                            <span class="f24c6"><%=data[i].contactor%>  <%=data[i].mobile%></span><br>
+                            <span class="f20c9"><%=data[i].detail%></span>
+                        </p>
+                        <a href="#" class="delete fr"></a>
+                        <a href="javascript:" class="edit fr"></a>
+                    </li>
+                <%}%>
+            </script>
+        </ul>
+        <!--增加地址-->
+        <a href="javascript:" class="increase borderb">增加地址</a>
+    </div>
+</div>
+<!--我的地址结束-->
+
+<!--新增地址-->
+<div id="editAddress" style="display: none;">
+    <!--头部-->
+    <div class="header w100">
+        <div class="header-cont  pr">
+            <a href="javascript:" class="header-left  pa"></a>
+            <div class="header-center f36">新增地址</div>
+            <a href="personalCenter.html" class="header-right  pa" ></a>
+        </div>
+    </div>
+    <!--主要内容-->
+    <div class="main w100">
+        <!--编辑地址-->
+        <form class="address bordert " >
+            <div class="warp bgf"  >
+                <div class="borderb pl20 clearfix p25">
+                    <span class="fl f28c6">所在地区：</span>
+                    <div class="fl city-wrap ">
+                        <input type="text"   id="city_dummy" class="uyes-select-widget uyes-my-form-select" placeholder="请选择城市" readonly="" autocomplete="off" value="深圳">
+                    </div>
+                    <div class="fl city-wrap dist-wrap demo-comp-select demo-display-bottom demo-theme-mobiscroll">
+                        <div class="demo-iframe demo-basic">
+                            <!-- Select demo markup -->
+                            <select name="请选择城市" id="dist_dummy">
+                                <option value="1">福田区</option>
+                                <option value="2">南山区</option>
+                                <option value="3">宝安区</option>
+                                <option value="4">龙华新区</option>
+                                <option value="5">盐田区</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="borderb pl20 clearfix p25  ">
+                    <span class="fl f28c6">小区名称：</span>
+                    <div class="fl  ">
+                        <input type="text"   class="uyes-select-widget uyes-my-form-select">
+                    </div>
+                </div>
+                <div class="borderb pl20 clearfix p25  ">
+                    <span class="fl f28c6">详细地址：</span>
+                    <div class="fl  ">
+                        <input type="text"   class="uyes-select-widget uyes-my-form-select" placeholder="街道、小区、大厦">
+                    </div>
+                </div>
+                <div class="borderb pl20 clearfix p25  ">
+                    <span class="fl f28c6">楼层门牌：</span>
+                    <div class="fl  ">
+                        <input type="text"   class="uyes-select-widget uyes-my-form-select" placeholder="楼号、单元号、门牌号">
+                    </div>
+                </div>
+                <div class="borderb pl20 clearfix p25  ">
+                    <span class="fl f28c6">姓名：</span>
+                    <div class="fl  ">
+                        <input type="text"   class="uyes-select-widget uyes-my-form-select">
+                    </div>
+                </div>
+                <div class="borderb pl20 clearfix p25  ">
+                    <span class="fl f28c6">手机号码：</span>
+                    <div class="fl  ">
+                        <input type="text"   class="uyes-select-widget uyes-my-form-select" id="phone">
+                    </div>
+                </div>
+            </div >
+            <a href="#"  id="save">保存地址</a>
+
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#dist_dummy').mobiscroll().select({
+                theme: 'android-ics light',
+                lang: 'zh',
+                mode:"scroller",
+                display: 'bottom',
+                minWidth: 800,
+                placeholder: '请选择区域',
+                setText : '确定',
+                cancelText : '取消', //取消按钮名籍我
+                headerText: '选择区域'
+            });
+        });
+    </script>
+</div>
+<!--新增地址结束-->
+
+
+</body>
+</html>

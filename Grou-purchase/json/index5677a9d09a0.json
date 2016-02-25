@@ -1,0 +1,30 @@
+﻿{
+  "status": 200,
+  "msg": "success",
+  "data": [
+    {
+      "_id": "5677a9d09a0",
+      "groupon_name": "北京测试数据",
+      "city_id": "5674fb1a9a0c6ec9728b673c",
+      "area_id": "5674fcb49a0c6e231f8b6a1c",
+      "subdistrict_id": "5674fd5c9a0c6ec9728b673d",
+      "sid": "98",
+      "type_id": "4",
+      "goods_id": "5630b2345ada2b42318b5560",
+      "groupon_img": "http://pic.uyess.com/groupon/d5759af5b2fe8c2749473c9713172838.jpg",
+      "groupon_price": "220",
+      "groupon_total": "150",
+      "groupon_num": "2",
+      "groupon_start": "2015-12-09",
+      "groupon_end": "2015-12-31",
+      "book_day": "5",
+      "book_period": "0",
+      "groupon_desc": "前海",
+      "status": "正常",
+      "add_time": 1450682832,
+      "address": "深圳南山区深南花园"
+    }
+
+
+  ]
+}

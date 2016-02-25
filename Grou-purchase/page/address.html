@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/public.css" rel="stylesheet">
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/address.js"></script>
+    <title>我的地址</title>
+</head>
+<body>
+<!--头部-->
+<div class="header w100">
+    <div class="header-cont  pr">
+        <a href="javascript:history.go(-1)" class="header-left  pa"></a>
+        <div class="header-center f36">我的地址</div>
+        <a href="personalCenter.html" class="header-right  pa" ></a>
+    </div>
+</div>
+<!--主要内容-->
+<div class="main w100">
+    <!--已有地址-->
+    <ul id="already_address">
+        <li class="clearfix">
+            <span class="weiseleted-tips fl"></span>
+            <p class="fl adress-info">
+                <span class="f24c6">张文  13245678985</span><br>
+                <span class="f20c9">广州市天河区天河南一路六运小区29号101</span>
+            </p>
+            <a href="#" class="delete fr"></a>
+            <a href="editAddress.html" class="edit fr"></a>
+        </li>
+        <li class="clearfix">
+            <span class="weiseleted-tips fl"></span>
+            <p class="fl adress-info">
+                <span class="f24c6">小文  13245678985</span><br>
+                <span class="f20c9">广州市天河区天河南一路六运小区29号101</span>
+            </p>
+            <a href="#"  class="delete fr"></a>
+            <a href="editAddress.html" class="edit fr"></a>
+        </li>
+    </ul>
+    <!--增加地址-->
+    <a href="editAddress.html" class="increase borderb">增加地址</a>
+</div>
+
+</body>
+</html>
