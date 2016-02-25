@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/public.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/main.js"></script>
+    <title>主机的添加、修改</title>
+</head>
+<body>
+<div class="center">
+    <div class="crumbs">
+        <i>
+            <a href="#">主机</a>
+            <span>&nbsp;>&nbsp;</span>
+            <a href="#">添加</a>
+        </i>
+    </div>
+    <div class="host_add">
+        <div class="host_add_tit">主机信息</div>
+        <ul class="host_add_ul ul_2_list clearfix">
+            <li class="required">
+                <span class="name">
+                    <i>*</i>
+                    <b>数量：</b>
+                </span>
+                <input name="num" type="number" class="input_40 input_text" maxlength="20" >
+                <i class="prompt">不能为空</i>
+            </li>
+            <li>
+                <span class="name">
+                    <b>网址：</b>
+                </span>
+                <input name="website" type="text" class="input_text input_70" maxlength="20">
+                <i class="prompt"></i>
+            </li>
+            <li class="required">
+                <span class="name">
+                    <i>*</i>
+                    <b>类型：</b>
+                </span>
+                <select class="select_text input_text">
+                    <option selected="true" disabled="true" value="">选择类型</option>
+                    <option >二级区号</option>
+                    <option >三级区号</option>
+                </select>
+                <i class="prompt">不能为空</i>
+            </li>
+            <li >
+                <span class="name">
+                    <b>标识：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+            </li>
+            <li class="required">
+                <span class="name">
+                    <i>*</i>
+                    <b>操作系统：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+                <i class="prompt">不能为空</i>
+            </li>
+            <li >
+                <span class="name">
+                    <b>硬盘：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+            </li>
+            <li class="required">
+                <span class="name">
+                    <i>*</i>
+                    <b>内存：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+                <i class="prompt">不能为空</i>
+            </li>
+            <li >
+                <span class="name">
+                    <b>是否已初始化：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>购买日期：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>供应商：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+            </li>
+            <li class="list_textarea clearfix">
+                <span class="name">
+                    <b>备注：</b>
+                </span>
+                <textarea class="textarea_text"  maxlength="100"></textarea>
+            </li>
+            <li >
+                <span class="name">
+                    <b>状态：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>操作员：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>日期：</b>
+                </span>
+                <input name="num" type="text" class="input_40 input_text" maxlength="20">
+            </li>
+        </ul>
+        <div class="host_add_tit">硬件信息</div>
+        <ul class="host_add_ul ul_3_list clearfix">
+            <li >
+                <span class="name">
+                    <b>CPU：</b>
+                </span>
+                <input name="num" type="text" class="input_50 input_text" maxlength="20">
+            </li>
+            <li>
+                <span class="name">
+                    <b>网址：</b>
+                </span>
+                <input name="website" type="text" class="input_text input_80" maxlength="20">
+                <i class="prompt"></i>
+            </li>
+            <li class="list_textarea clearfix">
+                <span class="name">
+                    <b>备注：</b>
+                </span>
+                <textarea class="textarea_text"  maxlength="100"></textarea>
+            </li>
+            <li >
+                <span class="name">
+                    <b>电源：</b>
+                </span>
+                <input name="num" type="text" class="input_50 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>列阵：</b>
+                </span>
+                <input name="num" type="text" class="input_50 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>光驱：</b>
+                </span>
+                <input name="num" type="text" class="input_50 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>品牌型号：</b>
+                </span>
+                <input name="num" type="text" class="input_50 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>机器序列号：</b>
+                </span>
+                <input name="num" type="text" class="input_50 input_text" maxlength="20">
+            </li>
+            <li >
+                <span class="name">
+                    <b>高度：</b>
+                </span>
+                <input name="num" type="text" class="input_50 input_text" maxlength="20">
+            </li>
+        </ul>
+        <div class="host_add_bottom">
+            <span class="ann confirm_ann">
+                <a href="#">
+                    <i class="confirm"></i>
+                    <span>确认</span>
+                </a>
+            </span>
+            <span class="ann">
+                <a href="#">
+                    <i class="return"></i>
+                    <span>返回</span>
+                </a>
+            </span>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

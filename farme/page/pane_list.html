@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/public.css" rel="stylesheet">
+    <link href="../css/laydate.css" rel="stylesheet">
+    <title>员工个人信息</title>
+</head>
+<body>
+<div class="center">
+    <div class="crumbs">
+        <i>
+            <a href="#">员工信息</a>
+            <span>&nbsp;>&nbsp;</span>
+            <a href="#">123</a>
+        </i>
+    </div>
+    <div class="form_operation">
+        <!--增加、查询-->
+        <div class="query_top clearfix">
+            <div class="fl">
+                <div class="query_top_list">
+                    <span>工单编号：</span>
+                    <input type="text" name="input_text">
+                </div>
+                <div class="query_top_list">
+                    <div class="d_1">
+                        <span>时间：</span>
+                        <input name="start" id="start" type="text" class="input_text">
+                        <div></div>
+                        <i class="icon"></i>
+                    </div>
+                    <div class="d_1">
+                        <span>至</span>
+                        <input name="end" id="end" type="text" class="input_text">
+                        <div></div>
+                        <i class="icon"></i>
+                    </div>
+                </div>
+                <div class="query_top_list">
+                    <span>关键字：</span>
+                    <input type="text" name="input_text">
+                </div>
+                <a href="#" class="search_btton">
+                    <span>查询</span>
+                    <i class="search_icon"></i>
+                </a>
+            </div>
+            <a href="#" class=" fr increase ">
+                <span>查询</span>
+                <i class="increase_icon"></i>
+            </a>
+        </div>
+    </div>
+    <!--表格-->
+    <div class="form">
+        <table class="general_form">
+            <thead>
+                <tr align="left">
+                    <th>
+                        <input class="checkbox2 check_all" name="check_all" type="checkbox">工单编号
+                    </th>
+                    <th>问题内容</th>
+                    <th>问题分类</th>
+                    <th>提交时间</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>生日</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script type="text/html" id="data_tpl">
+                    <%for (var i=0; i!==data.length; i++) {%>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="checkbox_1" class="checkbox_1"><%= data[i].job_number%>
+                                </td>
+                                <td><%= data[i].problem_content%></td>
+                                <td><%= data[i].question_classification%></td>
+                                <td><%= data[i].submission_time%></td>
+                                <td><%= data[i]._name%></td>
+                                <td><%= data[i].sex%></td>
+                                <td><%= data[i].birthday%></td>
+                                <td>
+                                    <a href="#" class="operation form_delete">删除</a>
+                                    <span>&nbsp;|&nbsp;</span>
+                                    <a href="#" class="operation form_see">查看</a>
+                                </td>
+                            </tr>
+                    <%}%>
+                </script>
+            </tbody>
+        </table>
+        <!--上、下页-->
+        <div class="operation_bottom clearfix">
+            <input class="check_all" type="checkbox" name="check_all">
+        <span class="ann">
+            <a href="#" class="operation_bottom_delete">
+                <span>删除</span>
+                <i class="icon"></i>
+            </a>
+        </span>
+         <span class="ann">
+            <a href="#" class="operation_bottom_export">
+                <span>返回</span>
+                <i class="icon"></i>
+            </a>
+        </span>
+            <ul class="fr page">
+                <li class="x">
+                    <a href="#"><<</a>
+                </li>
+                <li class="x">
+                    <a href="#"><</a>
+                </li>
+                <li  class="active">
+                    <a href="#" >1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li >
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li >
+                    <a href="#">5</a>
+                </li>
+                <li class="x">
+                    <a href="#">></a>
+                </li>
+                <li class="x">
+                    <a href="#">>></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/template-native.js"></script>
+<script src="../js/laydate.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+
+<script>
+    var start={
+        elem:'#start',
+        format:'YYYY/MM/DD',
+        min:laydate.now(),//设置最小日期为当前日期
+        max:'2099-06-16',
+        istime:false,
+        choose: function (datas) {
+            end.min=datas;//开始日选好后，重置结束日的最小日期
+            end.start=datas//将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#end',
+        format: 'YYYY/MM/DD ',
+        min: laydate.now(),
+        max: '2099-06-16 ',
+        istime: false,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+</script>
+</body>
+</html>
